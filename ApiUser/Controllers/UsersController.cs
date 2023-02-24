@@ -6,11 +6,13 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ApiUser.Models;
+using Microsoft.AspNetCore.Cors;
 
 namespace ApiUser.Controllers
 {
     [Route("api/User")]
     [ApiController]
+
     public class UsersController : ControllerBase
     {
         private readonly UserContext _context;

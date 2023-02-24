@@ -69,7 +69,7 @@ namespace WebUser.Controllers
                     client.BaseAddress = new Uri(Baseurl);
                     client.DefaultRequestHeaders.Clear();
                     client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                    HttpResponseMessage Res = await client.PostAsJsonAsync<UserViewModel>($"api/User/", collection);
+                    HttpResponseMessage Res = await client.PostAsJsonAsync($"api/User/", collection);
                     if (Res.IsSuccessStatusCode)
                     {
                         var EmpResponse = Res.Content.ReadAsStringAsync().Result;
